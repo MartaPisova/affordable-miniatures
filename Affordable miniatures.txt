@@ -1,0 +1,3 @@
+Affordable miniatures
+project URl:https://flhqzakdwxlrcrpxqiss.supabase.co/rest/v1/
+Anon klíč: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZsaHF6YWtkd3hscmNycHhxaXNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzg0NDY2NTksImV4cCI6MjA5NDAyMjY1OX0.2flrCiRLSsDVAw2eTireKs-HzHWpznxjAud458-dmeM
