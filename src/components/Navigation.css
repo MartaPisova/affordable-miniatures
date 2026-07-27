@@ -11,7 +11,7 @@
 
 .nav-lang {
   font-family: var(--font-display);
-  font-size: 0.75rem;
+  font-size: 2rem;
   color: var(--color-gold);
   letter-spacing: 0.1em;
   cursor: pointer;
@@ -76,7 +76,7 @@
 
 .nav-menu a {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   color: var(--color-text);
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -84,4 +84,8 @@
 
 .nav-menu a:hover {
   color: var(--color-gold);
+}
+
+.nav-hamburger {
+  z-index: 1001;
 }
