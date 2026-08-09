@@ -1,0 +1,71 @@
+.admin-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.admin-login-box {
+  background: var(--color-panel);
+  border: 1px solid var(--color-gold);
+  padding: 3rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-login-box h1 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.admin-login-box p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.admin-input {
+  background: var(--color-bg);
+  border: 1px solid var(--color-gold);
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  width: 100%;
+  outline: none;
+}
+
+.admin-input:focus {
+  border-color: var(--color-text);
+}
+
+.admin-button {
+  background: var(--color-gold);
+  color: var(--color-bg);
+  border: none;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.admin-button:hover {
+  opacity: 0.85;
+}
+
+.admin-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.admin-error {
+  color: #e05555;
+  font-size: 1rem;
+}
