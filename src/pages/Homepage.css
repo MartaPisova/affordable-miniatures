@@ -72,14 +72,14 @@
 .footer-contact {
   font-family: var(--font-body);
   font-size: 1.2rem;
-  color: var(--color-text-muted);
+  color: var(--color-gold);
   line-height: 1.8;
 }
 
 .footer-copy {
   font-family: var(--font-display);
   font-size: 0.9rem;
-  color: var(--color-text-muted);
+  color: var(--color-gold);
   letter-spacing: 0.1em;
 }
 

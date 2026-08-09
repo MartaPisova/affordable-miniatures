@@ -7,19 +7,19 @@
 }
 
 :root {
-  --color-bg: #0a0a0f;
+  --color-bg: rgba(204, 199, 199, 0.92);
   --color-panel: #1a1a2e;
-  --color-gold: #c9a84c;
+  --color-gold: #1a1a2e;
   --color-red: #8b0000;
-  --color-text: #e8e0d0;
-  --color-text-muted: #9a9080;
+  --color-text: #c88807;
+  --color-text-muted: #c97412;
   --font-display: 'Cinzel', serif;
   --font-body: 'Crimson Text', serif;
 }
 
 body {
   background-color: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-gold);
   font-family: var(--font-body);
   font-size: 18px;
   line-height: 1.6;

@@ -36,7 +36,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--color-gold);
+  background: var(--color-text-muted);
   transition: all 0.3s ease;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .nav-menu a:hover {
-  color: var(--color-gold);
+  color: var(--color-text-muted);
 }
 
 .nav-hamburger {

@@ -17,7 +17,7 @@
 }
 
 .pricing-intro {
-  color: var(--color-text-muted);
+  color: var(--color-gold);
   font-size: 1.4rem;
   line-height: 1.7;
 }
@@ -42,7 +42,7 @@
 }
 
 .pricing-item:hover {
-  background: #232340;
+  background: rgba(102, 100, 100, 0.92);
 }
 
 .pricing-item-photo {
@@ -63,6 +63,7 @@
   margin-bottom: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  color: var(--color-text-muted);
 }
 
 .pricing-item-info p {
