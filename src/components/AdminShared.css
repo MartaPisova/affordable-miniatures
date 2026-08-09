@@ -1,0 +1,127 @@
+.admin-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1000px;
+}
+
+.admin-section h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.admin-hint {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.admin-upload-btn {
+  display: inline-block;
+  background: var(--color-gold);
+  color: var(--color-bg);
+  padding: 0.75rem 2rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: opacity 0.3s ease;
+}
+
+.admin-upload-btn:hover {
+  opacity: 0.85;
+}
+
+.admin-message {
+  color: var(--color-gold);
+  font-size: 1rem;
+}
+
+.admin-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.admin-photo-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-photo-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--color-gold);
+}
+
+.admin-delete-btn {
+  background: var(--color-red);
+  color: var(--color-text);
+  border: none;
+  padding: 0.4rem 1rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.admin-delete-btn:hover {
+  opacity: 0.85;
+}
+
+.admin-empty {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.admin-input {
+  background: var(--color-bg);
+  border: 1px solid var(--color-gold);
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+}
+
+.admin-input:focus {
+  border-color: var(--color-text);
+}
+
+.admin-textarea {
+  background: var(--color-bg);
+  border: 1px solid var(--color-gold);
+  color: var(--color-text);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.admin-save-btn {
+  background: var(--color-panel);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  padding: 0.75rem 2rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.admin-save-btn:hover {
+  background: var(--color-gold);
+  color: var(--color-bg);
+}
