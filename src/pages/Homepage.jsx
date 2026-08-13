@@ -1,27 +1,34 @@
 import { useState, useEffect } from 'react'
+import { supabase } from '../supabaseClient'
 import Navigation from '../components/Navigation'
 import './Homepage.css'
 
-const PLACEHOLDER_SLIDES = [
-  { id: 1, label: 'Foto 1' },
-  { id: 2, label: 'Foto 2' },
-  { id: 3, label: 'Foto 3' },
-  { id: 4, label: 'Foto 4' },
-  { id: 5, label: 'Foto 5' },
-]
-
 export default function Homepage() {
-  const [slides] = useState(PLACEHOLDER_SLIDES)
+  const [slides, setSlides] = useState([])
   const [offset, setOffset] = useState(0)
 
   useEffect(() => {
+    fetchSlides()
+  }, [])
+
+  useEffect(() => {
+    if (slides.length === 0) return
     const timer = setInterval(() => {
       setOffset(prev => (prev + 1) % slides.length)
     }, 3000)
     return () => clearInterval(timer)
   }, [slides.length])
 
+  const fetchSlides = async () => {
+    const { data } = await supabase
+      .from('am_slideshow')
+      .select('*')
+      .order('sort_order')
+    if (data && data.length > 0) setSlides(data)
+  }
+
   const getVisible = () => {
+    if (slides.length === 0) return []
     return [0, 1, 2, 3].map(i => slides[(offset + i) % slides.length])
   }
 
@@ -38,15 +45,17 @@ export default function Homepage() {
 
       <main className="homepage-slideshow">
         <div className="slideshow-frame">
-          {getVisible().map((slide, index) => (
-            <div key={`${slide.id}-${index}`} className="slide">
-              {slide.photo_url ? (
-                <img src={slide.photo_url} alt={slide.label} />
-              ) : (
-                <div className="slide-placeholder">{slide.label}</div>
-              )}
+          {slides.length === 0 ? (
+            <div className="slide">
+              <div className="slide-placeholder">Slideshow</div>
             </div>
-          ))}
+          ) : (
+            getVisible().map((slide, index) => (
+              <div key={`${slide.id}-${index}`} className="slide">
+                <img src={slide.photo_url} alt={`Slide ${index + 1}`} />
+              </div>
+            ))
+          )}
         </div>
       </main>
 
