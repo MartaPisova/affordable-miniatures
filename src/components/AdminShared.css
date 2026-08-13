@@ -125,3 +125,54 @@
   background: var(--color-gold);
   color: var(--color-bg);
 }
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+}
+
+.admin-gallery-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-gallery-item {
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid var(--color-gold);
+  padding: 1rem;
+  background: var(--color-panel);
+}
+
+.admin-gallery-item img {
+  width: 100px;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.admin-gallery-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.admin-gallery-info strong {
+  font-family: var(--font-display);
+  color: var(--color-gold);
+  font-size: 1rem;
+}
+
+.admin-gallery-info span {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.admin-gallery-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
