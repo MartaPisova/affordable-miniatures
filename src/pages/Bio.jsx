@@ -1,10 +1,24 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { supabase } from '../supabaseClient'
 import Navigation from '../components/Navigation'
 import './Bio.css'
 
 export default function Bio() {
   const [lang, setLang] = useState('EN')
+  const [bio, setBio] = useState(null)
+
+  useEffect(() => {
+    fetchBio()
+  }, [])
+
+  const fetchBio = async () => {
+    const { data } = await supabase
+      .from('am_bio')
+      .select('*')
+      .single()
+    if (data) setBio(data)
+  }
 
   return (
     <div className="bio-page">
@@ -16,21 +30,19 @@ export default function Bio() {
 
       <main className="bio-content">
         <div className="bio-photo">
-          <div className="bio-photo-placeholder">📷</div>
+          {bio?.photo_url
+            ? <img src={bio.photo_url} alt="Luděk" />
+            : <div className="bio-photo-placeholder">📷</div>
+          }
         </div>
 
         <div className="bio-text">
           <h2>{lang === 'EN' ? 'About me' : 'O mně'}</h2>
           <p>
-            {lang === 'EN'
-              ? 'Hi, my name is Luděk. I have been painting miniatures for many years. I actively play Warhammer Underworlds, Kill Team and Old World. My other hobbies include...'
-              : 'Ahoj, jmenuji se Luděk. Maluji miniatury již mnoho let. Aktivně hraji Warhammer Underworlds, Kill Team a Old World. Mezi moje další koníčky patří...'}
+            {bio
+              ? (lang === 'EN' ? bio.text_en : bio.text_cz)
+              : (lang === 'EN' ? 'Loading...' : 'Načítám...')}
           </p>
-          <ul className="bio-games">
-            <li>Warhammer Underworlds</li>
-            <li>Kill Team</li>
-            <li>Old World</li>
-          </ul>
         </div>
       </main>
 

@@ -110,7 +110,7 @@
 .admin-save-btn {
   background: var(--color-panel);
   border: 1px solid var(--color-gold);
-  color: var(--color-gold);
+  color: var(--color-text);
   padding: 0.75rem 2rem;
   font-family: var(--font-display);
   font-size: 0.9rem;
@@ -180,4 +180,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.admin-bio-photo {
+  width: 200px;
+  aspect-ratio: 3 / 4;
+  border: 1px solid var(--color-gold);
+  overflow: hidden;
+}
+
+.admin-bio-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
