@@ -176,3 +176,8 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+.admin-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

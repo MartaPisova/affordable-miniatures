@@ -149,7 +149,7 @@
 .lightbox-link {
   font-family: var(--font-display);
   font-size: 1rem;
-  color: var(--color-gold);
+  color: var(--color-text);
   letter-spacing: 0.1em;
   align-self: flex-start;
   border: 1px solid var(--color-gold);
